@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f7ed" />
+  <link rel="icon" href="data:," />
+  <title>Ekosistem Agro — Misi Kebun Sehat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Ekosistem Agro beranda">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M26.6 5.2C16 5.3 7 9.2 7 18.1c0 4.1 3.1 7 7.1 7 9 0 12.5-9.7 12.5-19.9Z"/><path d="M5.2 27.1c4.2-7.5 9.4-11.3 16.2-14.4"/></svg></span>
+        <span>ekosistem<span class="brand-light">agro</span></span>
+      </a>
+      <div class="top-right"><span class="school-pill"><span class="pulse"></span> MODUL SMK PERTANIAN</span><button class="help-button" id="helpBtn" aria-label="Buka panduan">?</button></div>
+    </header>
+
+    <section class="intro">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line"></span> SIMULASI EKOLOGI PERTANIAN</div>
+        <h1>Rawat kebun,<br><em>pulihkan ekosistem.</em></h1>
+        <p class="intro-copy">Jadilah pengelola agroekosistem. Seimbangkan air, tanah, hama, dan keanekaragaman hayati untuk panen yang berkelanjutan.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-top"><span class="mission-icon">✳</span><span>MISI LAPANGAN</span><span class="mission-level">01 / 01</span></div>
+        <div class="mission-name">Kebun organik sekolah</div>
+        <div class="mission-meta"><span>🌱 7 hari pengelolaan</span><span>◷ ± 5 menit</span></div>
+      </div>
+    </section>
+
+    <section class="game-layout" aria-label="Permainan Ekosistem Agro">
+      <div class="main-column">
+        <section class="field-card card">
+          <div class="field-head">
+            <div><div class="section-kicker">PLOT A · KEBUN CAMPUR</div><h2>Kondisi lahan</h2></div>
+            <div class="day-badge"><span class="sun-icon">☀</span><span id="dayLabel">HARI 1</span><b id="weatherLabel">CERAH</b></div>
+          </div>
+          <div class="field-illustration" id="fieldArt">
+            <div class="sky-glow"></div><span class="cloud cloud-one"></span><span class="cloud cloud-two"></span>
+            <span class="sun-art"></span><span class="bird bird-one">⌁</span><span class="bird bird-two">⌁</span>
+            <div class="hill hill-back"></div><div class="hill hill-front"></div>
+            <div class="field-ground"></div>
+            <div class="field-rows"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="crop-bed" id="cropBed" aria-label="Tanaman tumbuh di lahan">
+              <span class="crop crop-a"><i></i><i></i><b></b></span><span class="crop crop-b"><i></i><i></i><b></b></span><span class="crop crop-c"><i></i><i></i><b></b></span><span class="crop crop-d"><i></i><i></i><b></b></span><span class="crop crop-e"><i></i><i></i><b></b></span><span class="crop crop-f"><i></i><i></i><b></b></span><span class="crop crop-g"><i></i><i></i><b></b></span>
+            </div>
+            <div class="field-decoration decor-left">🌼</div><div class="field-decoration decor-right">🌿</div>
+            <div class="field-caption"><span class="caption-dot"></span><span id="fieldStatus">Tanaman tumbuh · fase vegetatif</span></div>
+            <div class="rain-layer" id="rainLayer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="field-footer"><span><span class="legend-dot plant-dot"></span>Tanaman budidaya</span><span><span class="legend-dot helper-dot"></span>Organisme bermanfaat</span><span class="field-note" id="growthNote">Pertumbuhan dimulai</span></div>
+        </section>
+
+        <section class="metrics-grid" aria-label="Indikator ekosistem">
+          <article class="metric-card card soil-card"><div class="metric-top"><span class="metric-icon soil-icon">◉</span><span class="metric-name">Kesehatan tanah</span><span class="metric-info" title="Kesuburan dan struktur tanah">i</span></div><div class="metric-value"><strong id="soilValue">58</strong><small>/ 100</small><span class="metric-trend" id="soilTrend">BAIK</span></div><div class="meter"><span id="soilBar"></span></div><div class="metric-hint">Bahan organik & struktur</div></article>
+          <article class="metric-card card water-card"><div class="metric-top"><span class="metric-icon water-icon">◉</span><span class="metric-name">Ketersediaan air</span><span class="metric-info" title="Kelembapan zona akar">i</span></div><div class="metric-value"><strong id="waterValue">68</strong><small>/ 100</small><span class="metric-trend" id="waterTrend">CUKUP</span></div><div class="meter"><span id="waterBar"></span></div><div class="metric-hint">Kelembapan zona akar</div></article>
+          <article class="metric-card card bio-card"><div class="metric-top"><span class="metric-icon bio-icon">✿</span><span class="metric-name">Keanekaragaman</span><span class="metric-info" title="Serangga penyerbuk dan organisme tanah">i</span></div><div class="metric-value"><strong id="bioValue">42</strong><small>/ 100</small><span class="metric-trend" id="bioTrend">SEDANG</span></div><div class="meter"><span id="bioBar"></span></div><div class="metric-hint">Penyerbuk & organisme tanah</div></article>
+          <article class="metric-card card pest-card"><div class="metric-top"><span class="metric-icon pest-icon">⌁</span><span class="metric-name">Tekanan hama</span><span class="metric-info" title="Semakin rendah, semakin baik">i</span></div><div class="metric-value"><strong id="pestValue">35</strong><small>/ 100</small><span class="metric-trend" id="pestTrend">TERKENDALI</span></div><div class="meter"><span id="pestBar"></span></div><div class="metric-hint">Semakin rendah semakin baik</div></article>
+        </section>
+
+        <section class="action-section card">
+          <div class="action-heading"><div><div class="section-kicker">PILIH TINDAKAN HARI INI</div><h2>Strategi pengelolaan</h2></div><span class="action-count" id="actionCount">1 tindakan / hari</span></div>
+          <div class="actions-grid" id="actionsGrid">
+            <button class="action-card selected" data-action="compost"><span class="action-symbol compost-symbol">♧</span><span class="action-title">Kompos organik</span><span class="action-desc">Pulihkan unsur hara & kehidupan tanah.</span><span class="action-impact">↑ Tanah <b>+14</b> · ↑ Hayati <b>+3</b></span><span class="select-mark">✓</span></button>
+            <button class="action-card" data-action="water"><span class="action-symbol water-symbol">◉</span><span class="action-title">Irigasi hemat</span><span class="action-desc">Siram zona akar saat kelembapan rendah.</span><span class="action-impact">↑ Air <b>+24</b> · tetes, bukan genang</span><span class="select-mark">✓</span></button>
+            <button class="action-card" data-action="refugia"><span class="action-symbol refugia-symbol">✿</span><span class="action-title">Tanam refugia</span><span class="action-desc">Undang musuh alami dan penyerbuk.</span><span class="action-impact">↑ Hayati <b>+14</b> · ↓ Hama <b>−12</b></span><span class="select-mark">✓</span></button>
+            <button class="action-card" data-action="rotation"><span class="action-symbol rotation-symbol">↻</span><span class="action-title">Rotasi tanaman</span><span class="action-desc">Putus siklus hama, jaga kesuburan.</span><span class="action-impact">↑ Tanah <b>+6</b> · ↓ Hama <b>−8</b></span><span class="select-mark">✓</span></button>
+            <button class="action-card pesticide-card" data-action="pesticide"><span class="action-symbol pesticide-symbol">⚠</span><span class="action-title">Pestisida kimia</span><span class="action-desc">Efek cepat, namun mengganggu organisme.</span><span class="action-impact">↓↓ Hama <b>−28</b> · ↓ Hayati <b>−12</b></span><span class="select-mark">✓</span></button>
+          </div>
+          <div class="action-bottom"><p id="actionTip"><span class="tip-icon">✦</span> Kompos membantu tanah menyimpan air dan mendukung organisme pengurai.</p><button class="primary-button" id="runDayBtn">Jalankan hari <span>→</span></button></div>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="progress-card card">
+          <div class="side-title"><div><div class="section-kicker">TARGET MISI</div><h2>Panen berkelanjutan</h2></div><span class="target-icon">↗</span></div>
+          <div class="harvest-number"><strong id="harvestValue">0</strong><span>%</span><small>potensi panen</small></div>
+          <div class="harvest-track"><span id="harvestBar"></span></div>
+          <div class="target-list"><div><span class="target-check" id="soilCheck">✓</span><span>Tanah sehat <small>≥ 60</small></span><b id="soilTarget">58/60</b></div><div><span class="target-check" id="bioCheck">✓</span><span>Hayati terjaga <small>≥ 55</small></span><b id="bioTarget">42/55</b></div><div><span class="target-check" id="pestCheck">✓</span><span>Hama terkendali <small>≤ 40</small></span><b id="pestTarget">35/40</b></div></div>
+          <div class="days-remaining"><div class="days-label"><span>WAKTU TERSISA</span><b id="daysRemaining">6 hari</b></div><div class="day-dots" id="dayDots"><i class="active"></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        </section>
+
+        <section class="ecosystem-card card">
+          <div class="side-title"><div><div class="section-kicker">PANTAU LINGKUNGAN</div><h2>Jaring-jaring kehidupan</h2></div><span class="life-icon">❋</span></div>
+          <p>Setiap organisme punya peran. Keseimbangan ekosistem membuat kebun lebih tangguh.</p>
+          <div class="organism-list"><div class="organism-row"><span class="organism-emoji">🐝</span><span><b>Penyerbuk</b><small>Membantu pembentukan buah</small></span><span class="organism-status" id="pollinatorStatus">Aktif</span></div><div class="organism-row"><span class="organism-emoji">🐞</span><span><b>Predator alami</b><small>Menekan populasi hama</small></span><span class="organism-status" id="predatorStatus">Ada</span></div><div class="organism-row"><span class="organism-emoji">🪱</span><span><b>Pengurai tanah</b><small>Mengolah sisa organik</small></span><span class="organism-status" id="decomposerStatus">Ada</span></div></div>
+          <div class="food-web"><span>🌿</span><i>→</i><span>🐛</span><i>→</i><span>🐞</span><i>→</i><span>🐦</span><small>aliran energi</small></div>
+        </section>
+
+        <section class="log-card card"><div class="log-head"><div><div class="section-kicker">CATATAN LAPANGAN</div><h2>Aktivitas terbaru</h2></div><span class="log-count" id="logCount">01</span></div><div class="log-list" id="logList"><div class="log-entry"><span class="log-dot"></span><div><b>Pengamatan awal</b><small>Hari 1 · Kondisi lahan dicatat</small></div></div></div></section>
+        <div class="learning-note"><span>✦</span><p><b>Catatan agronomi</b><br>Pengendalian hama terpadu mengutamakan pencegahan dan musuh alami.</p></div>
+      </aside>
+    </section>
+    <footer><span>EKOSISTEM AGRO <b>·</b> SIMULASI PEMBELAJARAN</span><span>Dibuat untuk calon petani masa depan <span class="footer-leaf">✿</span></span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="result-modal" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><button class="modal-close" id="modalClose" aria-label="Tutup">×</button><div class="result-art" id="resultArt">🌾</div><div class="section-kicker" id="resultKicker">MISI SELESAI</div><h2 id="resultTitle">Kebunmu berkembang!</h2><p id="resultCopy"></p><div class="result-stats" id="resultStats"></div><button class="primary-button" id="restartBtn">Main lagi <span>↻</span></button></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>
